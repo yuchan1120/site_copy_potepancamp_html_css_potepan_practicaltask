@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+    <html lang="ja">
+      <head>
+        <meta charset="utf-8">
+        <title>サイト模写</title>
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+      </head>
+
+<body>
+  <header class="header">
+  <input id="menu" type="checkbox"/>
+  <label for="menu" class="open">🍔</label>
+  <label for="menu" class="close">❌</label>
+
+  <aside>
+   <nav>
+    <ul>
+      <li class="HeaderNavListItem">
+        <a class="HeaderNavListItem__link" href="https://camp.potepan.com/content">
+          <span>CONTENT</span><br>
+          <span>学習内容</span>
+      </li>
+      <li class="HeaderNavListItem">
+        <a class="HeaderNavListItem__link" href="https://camp.potepan.com/interview">
+          <span>INTERVIEW</span><br>
+          <span>受講生の声</span>
+      </li>
+      <li class="HeaderNavListItem">
+        <a class="HeaderNavListItem__link" href="https://camp.potepan.com/faq">
+          <span>FAQ</span><br>
+          <span>よくある質問</span>
+       </li>
+       <li class="HeaderNavListItem">
+        <a class="HeaderNavListItem__link" href="https://camp.potepan.com/recruit">
+          <span>RECRUIT</span><br>
+          <span>採用企業様へ</span>
+       </li>
+       <li class="HeaderNavListItem">
+         <a class="HeaderNavListItem__link" href="https://camp.potepan.com/download">
+          <span>DOCUMENT</span><br>
+          <span>資料請求</span>
+       </li>
+       <li class="menuin-muryou-block">
+         <a class="menuin-muryou" href="https://camp.potepan.com/contact">無料カウンセリング</a>
+        </li>
+      </ul>
+     </nav>
+  </aside>
+
+    <a href="file:///Users/owl/Desktop/POTEPAN-CAMP/test.html"><img class="header-logo" src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/header-logo-sp.png" alt="ヘッダーのロゴ"></a> 
+
+    <div class="besidemenu">
+     <a class="black" href="https://camp.potepan.com/content">CONTENT<br>学習内容</a>
+     <a class="black" href="https://camp.potepan.com/interview">INTERVIEW<br>受講生の声</a>
+     <a class="black" href="https://camp.potepan.com/faq">FAQ<br>よくある質問</a>
+     <a class="black" href="https://camp.potepan.com/recruit">RECRUIT<br>採用企業様へ</a>
+     <a class="black" href="https://camp.potepan.com/download">DOCUMENT<br>資料請求</a>
+     <a class="header-muryou" href="https://camp.potepan.com/contact">無料カウンセリング</a>
+    </div>
+   </header>
+
+ <section class="firstview">
+    <div class="textblock">
+      <p class="text">最短５ヶ月間で<br>未経験からWebエンジニアへ</p>
+    </div>
+      <div class="maru"> 
+       <img class="maru-small" src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/100percent@2x.svg" alt="100％">
+
+       <img class="maru-lage" src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/no1@2x.svg" alt="No.1">
+
+       <img class="maru-small" src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/refund@2x.svg" alt="全額返金">
+      </div>
+      <div class="button">
+        <a class="button-muryou" href="https://camp.potepan.com/contact">無料カウンセリングはこちら</a>
+
+        <a class="button-siryou" href="https://camp.potepan.com/download">資料請求はこちら</a>
+      </div>
+    </div>
+    <p class="direction">※1: ショッパーズアイ「プログラミングスクール10社を対象にしたサイト比較イメージ調査（2020 年 5 月 22 日～25 日）」より全国の22～49歳の男女691名へのインターネット調査<br>
+      ※2: 29歳以下の転職サポート実施ユーザ（2021年7月~10月）<br>
+      ※3: 返金の条件については利用規約をご参照ください</p>
+  </section>
+</body>
+
+<style>
+  /*<ハンバーガーメニュー>*/
+  aside{
+    display: none;
+  }
+
+  .open,
+  .close{
+    display: none;
+  }
+
+  input[type="checkbox"]{
+    position: absolute;
+    left: -50vw;
+  }
+  @media screen and (max-width: 1080px){
+    .open{
+      display: block;
+      font-size: 40px;
+      position: absolute;
+      top: 0;
+      right: 15px;
+    }
+
+    .close{
+      display: block;
+      font-size: 40px;
+      position: absolute;
+      top: 0;
+      right: -100px;
+    }
+
+    aside{
+      display: flex;
+    flex-direction: column;
+      position: absolute;
+      top: 50px;
+      right: -1080px;
+      width: 100%;
+      height: 100%;
+      transition: all 0.4s;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    input[type="checkbox"]:checked ~ aside {
+      right: 0;
+    }
+    input[type="checkbox"]:checked ~ .open {
+      right: -100px;
+    }
+    input[type="checkbox"]:checked ~ .close {
+      right: 15px;
+    }
+  }
+
+.HeaderNavListItem{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.HeaderNavListItem__link{
+  padding: 20px 0;
+  text-decoration: none;
+}
+
+.HeaderNavListItem__link>span:first-child {
+    margin-left: auto;
+    font-size: 16px;
+    letter-spacing: 5px;
+    color: #fff;
+}
+
+.HeaderNavListItem__link>span:last-child {
+    font-size: 12px;
+    margin-top: 10px;
+    color: #F79214;
+    letter-spacing: 2px;
+}
+
+.menuin-muryou-block{
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    margin: 3% auto;
+    height: 60px;
+  }
+
+.menuin-muryou{
+  color: white;
+    background-color: orange;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 50%;
+}
+/*</ハンバーガーメニュー>*/
+
+    .firstview{
+   background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/top-hero.jpg);
+   background-size: cover;
+   background-position: center;
+   padding-top: 100px;
+   padding-bottom: 28px;
+ }
+@media screen and (max-width: 768px) {
+  .firstview{
+    background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/top-hero-sp.jpg);
+  }
+}
+
+  .header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    float: left;
+  }
+  @media screen and (max-width: 1080px) {
+    .header{
+      display: flex;
+    justify-content: space-between;
+    width: 100%;
+    float: none;
+    }
+}
+
+  .header-logo{
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-bottom: 5%;
+    height: 20px;
+    width: auto;
+  }
+  .header-logo:hover{
+    opacity: 0.5;
+  }
+
+.besidemenu{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2%;
+  margin-right: 2%;
+  width: 60%;
+}
+@media screen and (max-width: 1080px) {
+    .besidemenu{
+      display: none;
+    }
+}
+
+  .black{
+    color: black;
+    text-decoration: none;
+    text-align: center;
+  }
+  .black:hover{
+    opacity: 0.5;
+  }
+
+  .header-muryou{
+    color: white;
+    background-color: orange;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 50%;
+  }
+  .header-muryou:hover{
+   opacity: 0.5;
+  }
+
+.textblock{
+  width: 40%;
+    margin-left: 8%;
+}
+@media screen and (max-width: 768px) {
+    .textblock{
+      width: 100%;
+      margin-left: 0%;
+      margin-top: 50%;
+
+    }
+}
+
+.text{
+  font-size: 30px;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+    .text{
+      font-size: 25px;
+    }
+}
+
+.maru{
+  width: 40%;
+  margin-left: 8%;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+    .maru{
+      width: 100%;
+      margin-left: 0;
+    }
+}
+
+.maru-small{
+  width: 25%;
+}
+
+.maru-lage{
+  width: 40%;
+}
+
+.button{
+  width: 40%;
+  margin-left: 8%;
+  display: flex;
+  margin-top: 20px;
+}
+@media screen and (max-width: 768px) {
+    .button{
+      width: 100%;
+      margin-left: 0;
+      flex-direction: column;
+    }
+}
+
+.button-muryou{
+    margin-right: 2%;
+    width: 64%;
+    color: white;
+    text-align: center;
+    background-color: orange;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 50%;
+  }
+  .button-muryou:hover{
+    opacity: 0.5;
+  }
+  @media screen and (max-width: 768px) {
+    .button-muryou{
+      width: 100%;
+    }
+}
+
+.button-siryou{
+  width: 34%;
+  color: black;
+  text-align: center;
+  background-color: white;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 50%;
+}
+.button-siryou:hover{
+  opacity: 0.5;
+}
+@media screen and (max-width: 768px) {
+    .button-siryou{
+      width: 100%;
+    }
+}
+
+.direction{
+  margin-top: 50px;
+  font-size: 12px;
+}
+</style>
+
+</html>
